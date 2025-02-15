@@ -7,6 +7,7 @@ type FeatureProductProps = {
   index: number;
   project: {
     name: string;
+    image:any;
     detail: string;
     tech: string[];
     webUrl: string;
@@ -23,9 +24,8 @@ const FeatureProjectCard = ({ project, index }: FeatureProductProps) => {
             className={`relative project_image_layer xl:w-[580px] w-1/2 cursor-pointer overflow-hidden select-none ${
               index % 2 !== 0 && "ml-auto"
             } rounded`}
-            style={{backgroundImage: `url(/images/projects/project${index+1}.PNG)`}}
           >
-            {/* <Image src={`/images/projects/project${index+1}.PNG`} alt="project" /> */}
+            <Image src={project.image} alt="project" />
           </div>
         </a>
       </Link>
