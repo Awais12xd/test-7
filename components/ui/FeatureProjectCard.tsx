@@ -24,7 +24,7 @@ const FeatureProjectCard = ({ project, index }: FeatureProductProps) => {
               index % 2 !== 0 && "ml-auto"
             } rounded`}
           >
-            <Image src={`/images/projects/project${index+1}.PNG`} alt="project" />
+            <Image src={`@/public/images/projects/project${index+1}.PNG`} alt="project" />
           </div>
         </a>
       </Link>
