@@ -2,18 +2,11 @@ import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import project1 from "@/public/images/projects/project1.PNG";
-import project2 from "@/public/images/projects/project2.PNG";
-import project3 from "@/public/images/projects/project3.PNG";
-import project4 from "@/public/images/projects/project4.PNG";
-
-const Featured = [project1,project2,project3,project4];
 
 type FeatureProductProps = {
   index: number;
   project: {
     name: string;
-    image: any;
     detail: string;
     tech: string[];
     webUrl: string;
@@ -31,7 +24,7 @@ const FeatureProjectCard = ({ project, index }: FeatureProductProps) => {
               index % 2 !== 0 && "ml-auto"
             } rounded`}
           >
-            <Image src={Featured[index]} alt="project" />
+            <Image src={`/images/projects/project${index+1}.PNG`} alt="project" />
           </div>
         </a>
       </Link>
